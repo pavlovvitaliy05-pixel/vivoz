@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Чистый Город Краснодар | Вывоз мусора от 2500₽ за 1 час</title>
+    <meta name="description" content="Вывоз бытового и строительного мусора в Краснодаре. Любой сложности и объёма. Цена по фото или видео. Подача бригады за 1 час. Звоните!">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3e;
+            line-height: 1.4;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background: white;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 16px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0f5c3f, #2b8b5e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo p {
+            font-size: 0.85rem;
+            color: #4a627a;
+        }
+
+        .header-phone {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e2a3e;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-call {
+            background: #0f5c3f;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .btn-call:hover {
+            background: #0b4630;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #eef2f6 0%, #e2e8f0 100%);
+            padding: 60px 0;
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-badge {
+            background: #ffedd5;
+            color: #b45309;
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-list {
+            margin: 24px 0;
+            list-style: none;
+        }
+
+        .hero-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.05rem;
+        }
+
+        .hero-list li::before {
+            content: "✅";
+        }
+
+        .hero-form {
+            flex: 0.8;
+            background: white;
+            padding: 30px;
+            border-radius: 28px;
+            box-shadow: 0 25px 40px -15px rgba(0,0,0,0.2);
+            min-width: 280px;
+        }
+
+        .hero-form h3 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .price-badge {
+            background: #fef2e8;
+            padding: 12px;
+            border-radius: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 14px 18px;
+            border-radius: 48px;
+            border: 1px solid #cbd5e1;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background: #0f5c3f;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #094c33;
+        }
+
+        .pain-section {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .pain-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .pain-card {
+            background: #f8fafc;
+            border-radius: 28px;
+            padding: 28px;
+            flex: 1;
+            min-width: 250px;
+            transition: 0.2s;
+            border-left: 5px solid #0f5c3f;
+        }
+
+        .pain-card .pain {
+            font-weight: 700;
+            color: #b91c1c;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .pain-card .solution {
+            color: #0f5c3f;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .price-section {
+            padding: 60px 0;
+            background: #f1f5f9;
+        }
+
+        .price-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+        .price-item {
+            background: white;
+            border-radius: 28px;
+            padding: 30px;
+            flex: 1;
+            min-width: 220px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .price-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .price-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0f5c3f;
+            margin: 15px 0;
+        }
+
+        .steps {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .steps-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .step {
+            flex: 1;
+            text-align: center;
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 24px;
+        }
+
+        .step-number {
+            width: 45px;
+            height: 45px;
+            background: #0f5c3f;
+            color: white;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin: 0 auto 15px;
+        }
+
+        .district-section {
+            background: #fefce8;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .district-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .district-item {
+            background: white;
+            border-radius: 60px;
+            padding: 8px 22px;
+            font-weight: 600;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+
+        .footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .chat-widget {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 1000;
+        }
+
+        .chat-button {
+            background: #0f5c3f;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: 0.2s;
+            border: none;
+            color: white;
+            font-size: 28px;
+        }
+
+        .chat-button:hover {
+            background: #094c33;
+            transform: scale(1.05);
+        }
+
+        .chat-window {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 300px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 35px rgba(0,0,0,0.2);
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            background: #0f5c3f;
+            color: white;
+            padding: 12px 16px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .chat-body {
+            padding: 16px;
+        }
+
+        .chat-body input, .chat-body textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        .chat-body button {
+            background: #0f5c3f;
+            border-radius: 30px;
+            margin-top: 5px;
+        }
+
+        .close-chat {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .photo-price {
+            background: #e0f2fe;
+            border-radius: 40px;
+            padding: 18px 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .chat-window {
+                width: 260px;
+                right: -10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <div class="logo">
+            <h1>Чистый Город</h1>
+            <p>Вывоз мусора в Краснодаре с 2015 года</p>
+        </div>
+        <div>
+            <a href="tel:+79181596070" class="header-phone">📞 +7 (918) 159-60-70</a>
+        </div>
+        <a href="#form" class="btn-call">Оставить заявку</a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-text">
+            <div class="hero-badge">⚡ Подача бригады в течение часа в любую точку Краснодара</div>
+            <h1>Вывоз бытового и строительного мусора <br> от 2 500 ₽</h1>
+            <ul class="hero-list">
+                <li>Любой сложности и любого объёма — от мешков до тонн бетона</li>
+                <li>Цену определяем по фото или видео — честно и без обмана</li>
+                <li>Приедем через 60 минут или скидка 20%</li>
+                <li>Работаем по всему Краснодару: ФМР, Гидрострой, КСК, Центр, Пашковский, Елизаветинская, Юбилейный</li>
+            </ul>
+        </div>
+        <div class="hero-form" id="form">
+            <h3>Рассчитать стоимость</h3>
+            <p style="margin-bottom: 15px;">Пришлите фото или видео мусора — назовём точную цену</p>
+            <form id="leadForm">
+                <input type="text" id="name" placeholder="Ваше имя" required>
+                <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required>
+                <button type="submit" id="submitBtn">Отправить заявку</button>
+                <p style="font-size: 12px; text-align: center;">Нажимая кнопку, вы даете согласие на обработку данных</p>
+            </form>
+            <div class="photo-price">
+                📸 Пришлите фото в WhatsApp — <strong>цена за 2 минуты</strong><br>
+                <a href="https://wa.me/79181596070" style="color:#0f5c3f;">+7 (918) 159-60-70</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pain-section">
+    <div class="container">
+        <h2 style="font-size: 2rem; text-align: center;">Вывезем любой мусор — от бытового до строительного</h2>
+        <div class="pain-grid">
+            <div class="pain-card">
+                <div class="pain">🏠 Бытовой мусор</div>
+                <div class="solution">Пакеты, мешки, коробки, старая одежда, остатки еды — загрузим и утилизируем</div>
+            </div>
+            <div class="pain-card">
+                <div class="pain">🏗️ Строительный мусор</div>
+                <div class="solution">Бой кирпича, бетон, штукатурка, гипсокартон, плитка — любой объём</div>
+            </div>
+            <div class="pain-card">
+                <div class="pain">🛋️ Крупногабарит (КГМ)</div>
+                <div class="solution">Диваны, шкафы, холодильники, старые окна, двери, ванны</div>
+            </div>
+            <div class="pain-card">
+                <div class="pain">🌿 Остальные отходы</div>
+                <div class="solution">Ветки, трава, грунт, порубочные остатки — вывезем за 1 рейс</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="price-section">
+    <div class="container">
+        <h2 style="font-size: 2rem; text-align: center;">💰 Цены (по фото или видео)</h2>
+        <p style="text-align: center; margin-bottom: 20px;">Присылайте фото — называем точную стоимость. Без скрытых доплат.</p>
+        <div class="price-cards">
+            <div class="price-item">
+                <h3>Бытовой мусор</h3>
+                <div class="price-number">от 2 500 ₽</div>
+                <p>Мешки, пакеты, коробки<br>Машина 8-20 кубов</p>
+            </div>
+            <div class="price-item">
+                <h3>Строительный мусор</h3>
+                <div class="price-number">от 7 500 ₽</div>
+                <p>Бой, бетон, кирпич<br>Бункер 8 куб.м</p>
+            </div>
+            <div class="price-item">
+                <h3>Крупногабарит (КГМ)</h3>
+                <div class="price-number">от 5 500 ₽</div>
+                <p>Мебель, техника, двери<br>Одна машина — до 5 тонн</p>
+            </div>
+            <div class="price-item">
+                <h3>Абонемент (юр.лица)</h3>
+                <div class="price-number">от 1 500 ₽ / мес</div>
+                <p>Регулярный вывоз, контейнеры, график</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="district-section">
+    <div class="container">
+        <h2>📍 Работаем по всему Краснодару</h2>
+        <div class="district-list">
+            <span class="district-item">Центр</span>
+            <span class="district-item">ФМР (Фестивальный)</span>
+            <span class="district-item">Гидрострой</span>
+            <span class="district-item">КСК</span>
+            <span class="district-item">Юбилейный</span>
+            <span class="district-item">Пашковский</span>
+            <span class="district-item">Елизаветинская</span>
+            <span class="district-item">Прикубанский</span>
+            <span class="district-item">Комсомольский</span>
+        </div>
+        <p style="margin-top: 20px;"><strong>Подача бригады в течение часа в любую точку города — гарантируем!</strong></p>
+    </div>
+</section>
+
+<section class="steps">
+    <div class="container">
+        <h2 style="font-size: 2rem; text-align: center;">Как мы работаем — 3 простых шага</h2>
+        <div class="steps-grid">
+            <div class="step"><div class="step-number">1</div><h3>Пришлите фото/видео</h3><p>В WhatsApp или через форму — мы оценим объём и сложность</p></div>
+            <div class="step"><div class="step-number">2</div><h3>Фиксируем цену</h3><p>Называем точную сумму, заключаем договор онлайн</p></div>
+            <div class="step"><div class="step-number">3</div><h3>Выезд за 1 час</h3><p>Бригада приезжает, грузит, вывозит — вы платите по факту</p></div>
+        </div>
+    </div>
+</section>
+
+<section style="background: #e6f4ea; padding: 50px 0;">
+    <div class="container" style="text-align: center;">
+        <h2 style="font-size: 1.8rem;">🚀 Оставьте заявку сейчас — получите цену по фото за 5 минут</h2>
+        <p style="margin: 20px 0;">Бесплатная консультация эколога по сортировке/вывозу + фиксация цены на 3 месяца</p>
+        <a href="#form" class="btn-call" style="background:#b45309; padding: 14px 35px; display: inline-block;">Заказать оценку по фото</a>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>Чистый Город — вывоз бытового и строительного мусора в Краснодаре | Лицензия на утилизацию</p>
+        <p>Работаем по всему Краснодару: Центр, ФМР, Гидрострой, Юбилейный, Пашковский, Елизаветинская, Прикубанский</p>
+        <p>📞 <a href="tel:+79181596070">+7 (918) 159-60-70</a> | ✉️ vetpavlov@yandex.ru | WhatsApp: <a href="https://wa.me/79181596070">+7 (918) 159-60-70</a></p>
+        <p style="margin-top: 15px; font-size: 13px;">© 2026 Чистый Город. Подача бригады за 1 час — 24/7. Цена от 2 500 ₽ по фото/видео.</p>
+    </div>
+</footer>
+
+<div class="chat-widget">
+    <div class="chat-button" id="chatButton">
+        💬
+    </div>
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <span>Чат с оператором</span>
+            <button class="close-chat" id="closeChat">✖</button>
+        </div>
+        <div class="chat-body">
+            <p style="margin-bottom: 12px;">Здравствуйте! Скиньте фото мусора — рассчитаем цену за 2 минуты.</p>
+            <input type="text" id="chatName" placeholder="Ваше имя">
+            <textarea rows="2" id="chatMessage" placeholder="Опишите объём или пришлите фото в WhatsApp..."></textarea>
+            <button id="sendChatMsg">Отправить</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    async function sendToEmail(name, phone) {
+        const emailData = {
+            name: name,
+            phone: phone,
+            message: `Новая заявка с сайта вывоза мусора.\nИмя: ${name}\nТелефон: ${phone}\nГород: Краснодар\nУслуга: вывоз бытового и строительного мусора`,
+            _replyto: "vetpavlov@yandex.ru",
+            _subject: "🆕 Новая заявка с сайта Чистый Город"
+        };
+        
+        try {
+            const response = await fetch('https://formspree.io/f/mwpkkqke', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(emailData)
+            });
+            return response.ok;
+        } catch (error) {
+            console.error('Email error:', error);
+            return false;
+        }
+    }
+    
+    document.getElementById('leadForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const submitBtn = document.getElementById('submitBtn');
+        
+        if(!name || !phone) {
+            alert('Пожалуйста, заполните имя и телефон');
+            return;
+        }
+        
+        submitBtn.textContent = 'Отправка...';
+        submitBtn.classList.add('loading');
+        
+        const emailResult = await sendToEmail(name, phone);
+        
+        submitBtn.textContent = 'Отправить заявку';
+        submitBtn.classList.remove('loading');
+        
+        if(emailResult) {
+            alert(`Спасибо, ${name}! Ваша заявка принята. Мы перезвоним вам на ${phone} в ближайшие 10 минут для уточнения цены по фото.`);
+            document.getElementById('leadForm').reset();
+        } else {
+            alert('Произошла ошибка при отправке. Пожалуйста, позвоните нам по телефону +7 (918) 159-60-70 или напишите в WhatsApp.');
+        }
+    });
+    
+    const chatButton = document.getElementById('chatButton');
+    const chatWindow = document.getElementById('chatWindow');
+    const closeChat = document.getElementById('closeChat');
+    
+    chatButton.addEventListener('click', () => {
+        chatWindow.style.display = 'flex';
+    });
+    closeChat.addEventListener('click', () => {
+        chatWindow.style.display = 'none';
+    });
+    
+    document.getElementById('sendChatMsg').addEventListener('click', function() {
+        const chatName = document.getElementById('chatName').value.trim() || 'Клиент';
+        const chatMsg = document.getElementById('chatMessage').value.trim();
+        if(!chatMsg) {
+            alert('Напишите ваш вопрос или опишите мусор');
+            return;
+        }
+        alert(`Спасибо, ${chatName}! Оператор ответит в чате в ближайшие 5 минут.`);
+        document.getElementById('chatName').value = '';
+        document.getElementById('chatMessage').value = '';
+        chatWindow.style.display = 'none';
+    });
+</script>
+</body>
+</html>
